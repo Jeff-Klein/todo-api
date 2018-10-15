@@ -26,9 +26,15 @@ namespace TodoAPI.Auth
 
                 if (IsAuthorized(username, password))
                     return;
-                else
-                    context.Result = new UnauthorizedResult();
             }
+            // pede o login
+            context.HttpContext.Response.Headers["WWW-Authenticate"] = "Basic";
+
+            //adiciona o realm
+            if (!string.IsNullOrWhiteSpace(realm))
+                context.HttpContext.Response.Headers["WWW-Authenticate"] += $" realm=\"{realm}\"";
+
+            context.Result = new UnauthorizedResult();
         }
 
         public bool IsAuthorized(string username, string password)
