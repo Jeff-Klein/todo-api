@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\**" />
+    <Content Remove="Migrations\**" />
+    <EmbeddedResource Remove="Migrations\**" />
+    <None Remove="Migrations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Migrations\20181012150951_MyFirstMigration.cs" />
+    <Compile Include="Migrations\20181012150951_MyFirstMigration.Designer.cs" />
+    <Compile Include="Migrations\20181012151212_MySecondMigration.cs" />
+    <Compile Include="Migrations\20181012151212_MySecondMigration.Designer.cs" />
+    <Compile Include="Migrations\20181012151239_MyThirdMigration.cs" />
+    <Compile Include="Migrations\20181012151239_MyThirdMigration.Designer.cs" />
+    <Compile Include="Migrations\20181012191220_MyFourthMigration.cs" />
+    <Compile Include="Migrations\20181012191220_MyFourthMigration.Designer.cs" />
+    <Compile Include="Migrations\20181014195951_remaining fields.cs" />
+    <Compile Include="Migrations\20181014195951_remaining fields.Designer.cs" />
+    <Compile Include="Migrations\20181014213728_null date.cs" />
+    <Compile Include="Migrations\20181014213728_null date.Designer.cs" />
+    <Compile Include="Migrations\20181014215145_null dt.cs" />
+    <Compile Include="Migrations\20181014215145_null dt.Designer.cs" />
+    <Compile Include="Migrations\20181014215636_null dts.cs" />
+    <Compile Include="Migrations\20181014215636_null dts.Designer.cs" />
+    <Compile Include="Migrations\TodoContextModelSnapshot.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Auth\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
